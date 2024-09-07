@@ -7,24 +7,25 @@
     font-weight: 400;
     font-style: normal;
 }
+body{
+    width: 100%; 
+    max-width: 1440px;
+}
 header {
     width: 100%;
-    height: calc(88px * 0.8);
+    height: 88px;
     display: flex;
     background: linear-gradient(to left,
     #181823 70%, #000000 30%);
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 20px;
 }
 .logo{
-    width: (78.43px * 0.8);
-    height: 24px;
-    top: 32px;
-    left: 72px;
-    gap: 0px;
-    opacity: 1px;
+    width: 78.43px;
+    height: 24px;  
+    object-fit: cover;
+    margin-left: 72px;
 }
 nav {
     display: flex;
@@ -63,7 +64,7 @@ a:hover {
     align-items: center; 
 }
 .left-side img {
-    width: calc(750px * 0.8);
+    width: calc(38.4vw + 197.1px);
     height: 650px;
     gap: 0px;  
     object-fit: cover; 
@@ -759,49 +760,196 @@ margin-bottom: 8px;
 }
 
 
-@media (max-width: 768px) {
-    body {
-        font-size: calc(16px * 0.875); 
-    }
+footer{
+    background-color: #181823;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 72px;
 
-    .container {
-        width: 90%;
-    }
-
-    .header {
-        padding: 15px;
-    }
-
-    .hero {
-        height: 400px;
-    }
-
-    .card {
-        width: 45%;
-        margin: 2.5%;
-    }
+}
+.left-side7{
+    flex: 1;
+}
+.left-side7 img{
+    width: 130.72px;
+    height: 40px;
+    margin-bottom: 32px;
+}
+.icoons{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 5px 2px 3.34px 2px;
+    margin-bottom: 142px;
+}
+.left-side7 p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #8491A0;
+}
+.right-side7{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.col1, .col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #FFFFFF;
+}
+.col1 {
+    width: 196px;
+    height: 192px;
+}
+.col2 {
+    width: 196px;
+    height: 144px;
+    margin-left: 24px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 320px) {
     body {
-        font-size: calc(16px * 0.75); 
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
     }
 
-    .container {
-        width: 95%;
-    }
-
-    .header {
+    header {
+        flex-direction: column;
+        height: auto;
         padding: 10px;
     }
 
-    .hero {
-        height: 300px;
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
     }
 
-    .card {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dis1 {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    .left-side {
+        display: none; 
+    }
+
+    .right-side {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .right-side h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .right-side p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .s2 {
+        padding: 40px 10px;
+    }
+
+    .s2 h2 {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 10px 0;
+    }
+
+    .companies {
+        grid-template-columns: 1fr; 
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .companies .title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .companies .subtitle,
+    .companies .green,
+    .companies .blue,
+    .companies .pink {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .dis3, .dis4, .dis6, .dis7, .dis9, .dis10 {
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+
+    .left-side2, .left-side5, .left-side6, .left-side3, .left-side4 {
+        padding: 10px;
+    }
+
+    .left-side2 h2,
+    .left-side3 h2,
+    .left-side4 h2,
+    .left-side5 h2,
+    .dis8 h2,
+    .dis10 h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .left-side2 p,
+    .left-side3 p,
+    .left-side4 p,
+    .left-side5 p,
+    .dis8 p,
+    .dis10 p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .right-side2 img,
+    .right-side3 img {
         width: 100%;
-        margin: 5% 0;
-        float: none;
+        height: auto;
+    }
+
+    .right-side5 button {
+        width: 100%;
+    }
+
+    .dis8 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-side6 input,
+    .right-side6 button {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .right-side7 {
+        flex-direction: column;
+    }
+
+    .col1, .col2 {
+        margin: 0;
+        width: 100%;
     }
 }
+
